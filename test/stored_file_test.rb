@@ -11,6 +11,7 @@ class StoredFileTest < Minitest::Test
     @tempfile.rewind
 
     @file = Suwabara::StoredFile.new(@model, 'file', @tempfile, 'test.png')
+    @file.send(:write)
   end
 
   def test_initialize_from_io

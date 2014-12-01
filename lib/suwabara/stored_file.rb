@@ -1,4 +1,5 @@
 require 'mimemagic'
+require 'byebug'
 
 module Suwabara
   class StoredFile
