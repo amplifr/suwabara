@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'mini_magick',     '~> 4.0.1'
   spec.add_dependency 'streamio-ffmpeg', '~> 1.0.0'
 
-  spec.add_dependency 'rack',            '~> 1.5.2'
+  spec.add_dependency 'rack',            '~> 1.6.0'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
@@ -28,6 +28,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'minitest',  '~> 5.0'
   spec.add_development_dependency 'simplecov'
   spec.add_development_dependency 'coveralls'
-  spec.add_development_dependency 'activerecord', '~> 4.1.0'
+  spec.add_development_dependency 'activerecord', '~> 4.2.0'
   spec.add_development_dependency 'activerecord-nulldb-adapter'
 end
