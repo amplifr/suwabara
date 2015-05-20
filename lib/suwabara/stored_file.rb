@@ -33,7 +33,12 @@ module Suwabara
     end
 
     def initialize_from_io(file, original_name)
-      @name    = original_name
+      @name    = original_name.split('.')
+      if @name.count == 1
+        @name = @name.last
+      else
+        @name = "img.#{last}"
+      end
       @size    = file.size
       @file    = file
     end
