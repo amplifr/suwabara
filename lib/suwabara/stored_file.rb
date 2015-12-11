@@ -37,7 +37,7 @@ module Suwabara
       if @name.count == 1
         @name = @name.last
       else
-        @name = "img.#{last}"
+        @name = "img.#{@name.last}"
       end
       @size    = file.size
       @file    = file
