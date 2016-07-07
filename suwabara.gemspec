@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'mini_magick',     '~> 4.0.1'
   spec.add_dependency 'streamio-ffmpeg', '~> 2.0.0'
 
-  spec.add_dependency 'rack',            '~> 1.6.0'
+  spec.add_dependency 'rack',            '~> 2.0.0'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
