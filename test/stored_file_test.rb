@@ -15,12 +15,12 @@ class StoredFileTest < Minitest::Test
   end
 
   def test_initialize_from_io
-    assert_equal 'test.png', @file.name
+    assert_equal 'img.png', @file.name
   end
 
   def test_initialize_from_io_with_name
     file_gif = Suwabara::StoredFile.new(@model, 'file', @tempfile, 'test.gif')
-    assert_equal 'test.gif', file_gif.name
+    assert_equal 'img.gif', file_gif.name
   end
 
   def test_initialize_from_hash
@@ -45,11 +45,11 @@ class StoredFileTest < Minitest::Test
   def test_rename
     file_gif = @file.rename('test.gif')
 
-    assert_equal 'test.gif', file_gif.name
+    assert_equal 'img.gif', file_gif.name
   end
 
   def test_url
-    assert_equal '/000/000/042/test.png',
+    assert_equal '/000/000/042/img.png',
                  @file.url
 
     root_file = Class.new(Suwabara::StoredFile) do
@@ -58,13 +58,13 @@ class StoredFileTest < Minitest::Test
       end
     end.new(@model, 'file', @file.to_hash)
 
-    assert_equal URI.parse('http://assets.localhost/000/000/042/test.png'),
+    assert_equal URI.parse('http://assets.localhost/000/000/042/img.png'),
                  root_file.url
   end
 
   def test_to_hash
     assert_equal({
-      'name'    => 'test.png',
+      'name'    => 'img.png',
       'size'    => 6,
       'storage' => @file.storage,
     }, @file.to_hash)
