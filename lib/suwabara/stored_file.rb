@@ -46,6 +46,7 @@ module Suwabara
     def initialize_from_hash(hash)
       @name    = hash["name"]
       @size    = hash["size"]
+      @storage = hash["storage"]
     end
 
     private :initialize_from_io, :initialize_from_hash
@@ -110,7 +111,7 @@ module Suwabara
     end
 
     def storage
-      storage_for(@name)
+      @storage.presence || storage_for(@name)
     end
 
     private
